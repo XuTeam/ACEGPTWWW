@@ -32,3 +32,10 @@ tags: [server, release]
 * ConvNets, Tree Recursive Neural Networks and Constituency  
 * Scaling laws for large models  
 * Editing Neural Networks  
+
+#### **Some reading materials and linking**
+1. Our notes about Transformers and GPT, suggestions and comments are welcome. (add the notes in 2023MgNet here.)  
+2. Stanford CS224n: Natural Language Processing with Deep Learning: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1224/  
+3. ChatGPT: https://chat.openai.com/  
+4. GPT 3: https://en.wikipedia.org/wiki/GPT-3  
+5. Llama 2: https://ai.meta.com/llama/  
