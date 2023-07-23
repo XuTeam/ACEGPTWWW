@@ -1,4 +1,4 @@
 ---
-title: Blogs
+title: Blog posts
 description: Welcome to our NLP (Natural Language Processing) Blog under KAUST SCML Lab!
 ---
