@@ -13,22 +13,22 @@ author: "Xiaoxing Cheng"
 tags: [server, release]
 ---
 
-### State 1
-1. Introduction to NLP, Benyou Wang (CHHK Shenzhen)  
-2. Word Vectors and Word Window Classification  
-3. Dependency Parsing  
-4. Recurrent Neural Networks and Language Models  
-5. Vanishing Gradients, Fancy RNNs, Seq2Seq  
-6. Machine Translation, Attention, Subword Models  
-7. Transformers  
-8. More about Transformers and Pretraining  
-9. Pretrained models: GPT, Llama, …  
+### **State 1**
+* Introduction to NLP, Benyou Wang (CHHK Shenzhen)  
+* Word Vectors and Word Window Classification  
+* Dependency Parsing  
+* Recurrent Neural Networks and Language Models  
+* Vanishing Gradients, Fancy RNNs, Seq2Seq  
+* Machine Translation, Attention, Subword Models  
+* Transformers  
+* More about Transformers and Pretraining  
+* Pretrained models: GPT, Llama, …  
 
-### State 2
-10. Natural Language Generation  
-11. Integrating knowledge in language models  
-12. Bias, toxicity, and fairness  
-13. Retrieval Augmented Models + Knowledge  
-14. ConvNets, Tree Recursive Neural Networks and Constituency  
-15. Scaling laws for large models  
-16. Editing Neural Networks  
+### **State 2**
+* Natural Language Generation  
+* Integrating knowledge in language models  
+* Bias, toxicity, and fairness  
+* Retrieval Augmented Models + Knowledge  
+* ConvNets, Tree Recursive Neural Networks and Constituency  
+* Scaling laws for large models  
+* Editing Neural Networks  
