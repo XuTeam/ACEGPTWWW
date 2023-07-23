@@ -7,7 +7,7 @@ image:
     src: "https://images.unsplash.com/photo-1594729095022-e2f6d2eece9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kZXx8fHx8fDE2Nzg4OTQ2MDc&ixlib=rb-4.0.3&q=80&w=1080",
     alt: "full stack web development",
   }
-publishDate: "2019-06-30"
+publishDate: "2023-06-30"
 category: "News"
 author: "Xu's Team"
 tags: [NLP, seminar]
