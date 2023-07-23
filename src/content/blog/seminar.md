@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Seminar on Math of NLP"
-snippet: "The μ-PRO 1.0.6 ferroelectric, ferromagnetic, and effective property modules are available now."
+snippet: ""
 image:
   {
     src: "https://images.unsplash.com/photo-1594729095022-e2f6d2eece9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kZXx8fHx8fDE2Nzg4OTQ2MDc&ixlib=rb-4.0.3&q=80&w=1080",
@@ -9,8 +9,8 @@ image:
   }
 publishDate: "2019-06-30"
 category: "News"
-author: "Xiaoxing Cheng"
-tags: [server, release]
+author: "Xu's Team"
+tags: [NLP, seminar]
 ---
 
 ### **State 1**
@@ -36,7 +36,7 @@ tags: [server, release]
 #### **Some reading materials and linking**
 Our notes about Transformers and GPT, suggestions and comments are welcome. (add the notes in 2023MgNet here.)  
 
-(1)Stanford CS224n: Natural Language Processing with Deep Learning: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1224/  
-(2) ChatGPT: https://chat.openai.com/  
+1. (1)Stanford CS224n: Natural Language Processing with Deep Learning: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1224/  
+2. (2) ChatGPT: https://chat.openai.com/  
 (3) GPT 3: https://en.wikipedia.org/wiki/GPT-3  
 (4) Llama 2: https://ai.meta.com/llama/  
