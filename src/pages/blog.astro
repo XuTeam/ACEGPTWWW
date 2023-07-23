@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "~/layouts/Layout.astro";
+import Sectionhead from "~/components/sectionhead.astro";
+import { frontmatter } from "~/content/pages/blog.md";
+
+// import { title, description } from "@content/blog.json";
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("blog", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+---
+
+<Layout title="Blog">
+  <Sectionhead>
+    <Fragment slot="title">{frontmatter.title}</Fragment>
+    <Fragment slot="desc">
+      {frontmatter.description}
+    </Fragment>
+  </Sectionhead>
+  <main class="mt-16">
+    <ul class="mx-auto grid max-w-4xl gap-16">
+      {
+        publishedBlogEntries.map((blogPostEntry, index) => (
+          <li>
+            <a href={`/blog/${blogPostEntry.slug}`}>
+              <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
+                <Picture
+                  src={blogPostEntry.data.image.src}
+                  alt={blogPostEntry.data.image.alt}
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  widths={[200, 400, 800]}
+                  aspectRatio="16:9"
+                  background="#ffffff"
+                  fit="cover"
+                  position="center"
+                  loading={index <= 2 ? "eager" : "lazy"}
+                  decoding={index <= 2 ? "sync" : "async"}
+                  class="w-full rounded-md"
+                />
+                <div>
+                  <!-- <span class="text-sm font-medium uppercase tracking-wider text-blue-400">
+                    {blogPostEntry.data.category}
+                  </span> -->
+
+                  <h2 class="mt-1 text-3xl font-semibold leading-snug tracking-tight ">
+                    {blogPostEntry.data.title}
+                  </h2>
+
+                  <div class="mt-3 flex gap-2">
+                    <span class="text-gray-400">
+                      {blogPostEntry.data.author}
+                    </span>
+                    <span class="text-gray-400">• </span>
+                    <time
+                      class="text-gray-400"
+                      datetime={blogPostEntry.data.publishDate.toISOString()}
+                    >
+                      {blogPostEntry.data.publishDate.toDateString()}
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
