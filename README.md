@@ -18,6 +18,15 @@
 - 🔗 Open Graph tags for social media sharing
 - 💅 [Prettier](https://prettier.io/) setup for both [Astro](https://github.com/withastro/prettier-plugin-astro) and [Tailwind](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 
+## Setup
+
+1. Install nvm by `source install.sh`
+2. Install node 16 using nvm by `nvm install 16`
+3. Check node version by `node -v`
+4. `npm install`
+5. `npm run dev` for developing the website
+6. `npm run build` for build the static files of the website for deployment
+
 ## Commands
 
 | Command                | Action                                            |
