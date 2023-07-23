@@ -13,7 +13,7 @@ author: "Xiaoxing Cheng"
 tags: [server, release]
 ---
 
-State 1
+### State 1
 1. Introduction to NLP, Benyou Wang (CHHK Shenzhen)
 2. Word Vectors and Word Window Classification 
 3. Dependency Parsing 
@@ -24,7 +24,7 @@ State 1
 8. More about Transformers and Pretraining
 9. Pretrained models: GPT, Llama, …
 
-State 2
+### State 2
 10. Natural Language Generation
 11. Integrating knowledge in language models
 12. Bias, toxicity, and fairness
