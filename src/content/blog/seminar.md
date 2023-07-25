@@ -9,7 +9,7 @@ image:
   }
 publishDate: "2023-06-30"
 category: "News"
-author: "Xu's Team"
+author: "multigrid.org"
 tags: [NLP, seminar]
 ---
 
