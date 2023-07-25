@@ -4,7 +4,7 @@ description: Welcome to our NLP (Natural Language Processing) Blog!
 ---
 
 
-#### **Some reading materials and linking**
+#### **Some reading materials and links**
 Our notes about Transformers and GPT, suggestions and comments are welcome. (add the notes in 2023MgNet here.)  
 
 1. Stanford CS224n: Natural Language Processing with Deep Learning: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1224/  
