@@ -3,7 +3,8 @@ import { getCollection } from "astro:content";
 import { Picture } from "@astrojs/image/components";
 import Layout from "~/layouts/Layout.astro";
 import Sectionhead from "~/components/sectionhead.astro";
-import { frontmatter } from "~/content/pages/blog.md";
+import { frontmatter, Content } from "~/content/pages/blog.md";
+
 
 // import { title, description } from "@content/blog.json";
 // Filter blog entries with 'draft: false' & date before current date
@@ -72,5 +73,8 @@ publishedBlogEntries.sort(function (a, b) {
         ))
       }
     </ul>
+    <article class="prose-xl prose-ol:list-decimal prose-ul:list-disc prose-a:underline mx-auto mt-14  max-w-[735px] pt-10">
+      <Content />
+    </article>
   </main>
 </Layout>
