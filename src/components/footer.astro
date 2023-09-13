@@ -27,10 +27,20 @@ const links: Array<FooterLink> = [
 ];
 ---
 
+.image-container {
+  flex: 1; /* Equal distribution of available space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.image {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
 <footer class="relative flex h-30 items-center justify-between">
-  <!--<div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
-  </div>-->
   <p>    
     <h2
       class="gradient-text text-center font-extrabold tracking-tight text-xl"
@@ -41,9 +51,14 @@ const links: Array<FooterLink> = [
 
   <!-- Images div -->
   <div class="flex space-x-4"> <!-- spacing between images -->
-    <img src="/CUHKSZ.png" alt="Image 1" class="h-auto w-auto"> <!-- set your desired height and width -->
-    <img src="/SRIBD.png" alt="Image 2" class="h-auto w-auto">
-    <img src="/KAUST.png" alt="Image 3" class="h-auto w-auto">
+    <div class="image-container">
+      <img src="/CUHKSZ.png" alt="Image 1" class="image">
+    </div>
+    <div class="image-container">
+      <img src="/SRIBD.png" alt="Image 2" class="image">
+    </div>
+    <div class="image-container">
+      <img src="/KAUST.png" alt="Image 3" class="image">
+    </div>
   </div>
 </footer>
-
