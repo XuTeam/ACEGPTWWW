@@ -33,11 +33,12 @@ const links: Array<FooterLink> = [
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
+    height: 130px; /* Set a fixed height for all image containers */
   }
 
   .image {
-    max-width: 70%; /* Ensure images don't exceed their container width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    height: 100%; /* Make the images fill the container height */
   }
 </style>
 
@@ -63,4 +64,5 @@ const links: Array<FooterLink> = [
     </div>
   </div>
 </footer>
+
 
