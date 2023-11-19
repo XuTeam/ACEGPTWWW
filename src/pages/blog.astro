@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import Layout from "~/layouts/Layout.astro";
-import Sectionhead from "~/components/sectionhead.astro";
 import { frontmatter, Content } from "~/content/pages/blog.md";
 
 
@@ -19,59 +18,53 @@ publishedBlogEntries.sort(function (a, b) {
 ---
 
 <Layout title="Blog">
-  <Sectionhead>
-    <Fragment slot="title">{frontmatter.title}</Fragment>
-    <Fragment slot="desc">
+  <main >
+    <h1 class="text-4xl font-bold tracking-tight text-center">
+      {frontmatter.title}
+    </h1>
+    <p class="mx-auto mt-4 max-w-screen-lg text-lg text-slate-600 text-center">
       {frontmatter.description}
-    </Fragment>
-  </Sectionhead>
-  <main class="mt-16">
-    <ul class="mx-auto grid max-w-4xl gap-16">
+    </p> 
+    <ul class="mx-auto grid max-w-4xl gap-16 mt-16">
       {
         publishedBlogEntries.map((blogPostEntry, index) => (
           <li>
             <a href={`/blog/${blogPostEntry.slug}`}>
               <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
-                <Picture
-                  src={blogPostEntry.data.image.src}
-                  alt={blogPostEntry.data.image.alt}
-                  sizes="(max-width: 800px) 100vw, 800px"
-                  widths={[200, 400, 800]}
-                  aspectRatio="16:9"
-                  background="#ffffff"
-                  fit="cover"
-                  position="center"
-                  loading={index <= 2 ? "eager" : "lazy"}
-                  decoding={index <= 2 ? "sync" : "async"}
-                  class="w-full rounded-md"
+                <Image
+                src={blogPostEntry.data.image.src}
+                alt={blogPostEntry.data.image.alt}
+                class="w-full rounded-md"
+                width="800"
+                height="450"
                 />
                 <div>
                   <!-- <span class="text-sm font-medium uppercase tracking-wider text-blue-400">
                     {blogPostEntry.data.category}
-                  </span> -->
-
-                  <h2 class="mt-1 text-3xl font-semibold leading-snug tracking-tight ">
-                    {blogPostEntry.data.title}
-                  </h2>
-
-                  <div class="mt-3 flex gap-2">
+                    </span> -->
+                    
+                    <h2 class="mt-1 text-3xl font-semibold leading-snug tracking-tight ">
+                      {blogPostEntry.data.title}
+                      </h2>
+                      
+                      <div class="mt-3 flex gap-2">
                     <span class="text-gray-400">
                       {blogPostEntry.data.author}
-                    </span>
-                    <span class="text-gray-400">• </span>
-                    <time
+                      </span>
+                      <span class="text-gray-400">• </span>
+                      <time
                       class="text-gray-400"
                       datetime={blogPostEntry.data.publishDate.toISOString()}
-                    >
+                      >
                       {blogPostEntry.data.publishDate.toDateString()}
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-        ))
-      }
+                      </time>
+                      </div>
+                      </div>
+                      </div>
+                      </a>
+                      </li>
+                      ))
+                    }
     </ul>
     <article class="prose-xl prose-ol:list-decimal prose-ul:list-disc prose-a:underline mx-auto mt-14  max-w-[735px] pt-10">
       <Content />

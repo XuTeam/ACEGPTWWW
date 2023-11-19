@@ -1,83 +1,20 @@
 ---
-import "@fontsource-variable/inter";
-import Compatibility from "~/components/compatibility.astro";
-import Features from "~/components/features.astro";
-import Footer from "~/components/footer.astro";
-import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
-import Blog from "~/components/index-blog.astro";
-import Try from "~/components/try.astro";
-import Showcase from "~/components/showcase.astro";
-import Splash from "~/components/splash.astro";
-import "~/styles/index.css";
-
-const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
-const description =
-  "Developing Arabic-Chinese-English GPT </br> By multigrid.org";
+import Stats from '../components/Stats.astro';
+import Features from '../components/Features.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Layout from '../layouts/Layout.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Blog from '../components/Blog.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/acelogo1.png" type="image/svg+xml" />
-    <meta name="generator" content={generator} />
-
-    <title>ACEGPT</title>
-    <meta name="description" content={description} />
-
-    <!-- social media -->
-    <meta property="og:title" content="ACEGPT" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:url" content={site} />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- initialize theme -->
-    <script is:inline>
-      const themeSaved = localStorage.getItem("theme");
-
-      if (themeSaved) {
-        document.documentElement.dataset.theme = themeSaved;
-      } else {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
-      }
-
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (event) => {
-          if (!localStorage.getItem("theme")) {
-            document.documentElement.dataset.theme = event.matches
-              ? "dark"
-              : "light";
-          }
-        });
-    </script>
-  </head>
-  <body
-    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
-  >
-    <Header />
-    <Splash />
-    <div class="space-y-24 px-8 py-32">
-      <Intro />
-      <div class="pt-10">        
-        <a href="/blog">
-          <Blog/>
-        </a>
-      </div>
-      <div class="pt-10">
-        <a href="http://35.220.251.202:5903/">
-          <Try />
-        </a>
-      </div>
-    </div>
-    <Footer />
-  </body>
-</html>
+<Layout title="Welcome to Astrolus.">
+	<main class="space-y-40 mb-40">
+		<HeroSection/>
+		<Features/>
+		<Stats/>
+		<Testimonials/>
+		<CallToAction/>
+		<Blog/>
+	</main>
+</Layout>
